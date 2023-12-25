@@ -1,0 +1,59 @@
+.diagram {
+	flex-grow: 1;
+	position: relative;
+}
+
+.node {
+	position: absolute;
+	width: 250px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.node .card-body {
+  background-color: white;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.node .node-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate3d(40%, -40%, 0);
+  border: 1px solid black;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.node.hand {
+	background-color: #E9B872;
+}
+
+.node.auto-delete {
+	background-color: #90A959;
+}
+
+.node.auto-convert {
+	background-color: #D96C06;
+}
+
+.node.event-base {
+	background-color: #8380B6;
+}
+
+.node.choice {
+	background-color: #A63D40;
+}
+
+.node.parallel {
+	background-color: #6494AA;
+}

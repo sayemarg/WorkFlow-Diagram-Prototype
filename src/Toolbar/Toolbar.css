@@ -1,0 +1,41 @@
+.search {
+	box-shadow: 0 0 1px black;
+  align-items: center;
+  background: white;
+  border-radius: 2rem;
+  display: flex;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  padding: 0.5rem;
+}
+
+.search-input {
+  border-radius: 1rem;
+  border: none;
+  flex-grow: 1;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.selector-list .card {
+  margin-top: 1rem;
+}
+
+.selector-list-item {
+	box-shadow: 0 0 1px black;
+  align-items: center;
+  background-color: white;
+  border-radius: 1rem;
+  column-gap: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  padding: 1rem;
+}
+
+.selector-list-item:not(:first-child) {
+  margin-top: 0.5rem;
+}
