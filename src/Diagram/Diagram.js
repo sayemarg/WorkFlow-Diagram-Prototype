@@ -8,20 +8,38 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "./Diagram.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useCallback } from "react";
 import { useSelectContext } from "../SelectContextProvider/SelectContext";
 
 const Diagram = () => {
 	const { setSelectedNodeType } = useSelectContext();
 
+	const onDiagramClick = useCallback(
+		(event) => {
+			if (event.target?.closest(".node")) return;
+
+			setSelectedNodeType(undefined);
+		},
+		[setSelectedNodeType]
+	);
+
 	return (
-		<div className="diagram">
+		<div className="diagram" onClick={onDiagramClick}>
 			<div
 				onClick={() => setSelectedNodeType("hand")}
 				className="node card hand"
 				style={{ top: "100px", right: "100px" }}
 			>
 				<div className="card-title">عملیات دستی</div>
-				<div className="card-body"></div>
+				<div className="card-body">
+					<div className="card-body-separator">
+						شرکت فناوری اطلاعات فن آگین
+					</div>
+					<div className="card-body-separator">
+						دسترسی به فرم درخواست خرید
+					</div>
+					<div>امکان ویرایش ندارد</div>
+				</div>
 				<div className="node-icon">
 					<FontAwesomeIcon icon={faHand} />
 				</div>
@@ -33,7 +51,6 @@ const Diagram = () => {
 				style={{ top: "100px", right: "400px" }}
 			>
 				<div className="card-title">عملیات اتوماتیک حذف</div>
-				<div className="card-body"></div>
 				<div className="node-icon">
 					<FontAwesomeIcon icon={faX} />
 				</div>
@@ -45,7 +62,7 @@ const Diagram = () => {
 				style={{ top: "100px", right: "700px" }}
 			>
 				<div className="card-title">عملیات اتوماتیک تبدیل</div>
-				<div className="card-body"></div>
+				<div className="card-body">تبدیل به فاکتور</div>
 				<div className="node-icon">
 					<FontAwesomeIcon icon={faRotate} />
 				</div>
@@ -57,9 +74,7 @@ const Diagram = () => {
 				style={{ top: "500px", right: "100px" }}
 			>
 				<div className="card-title">شروع عملیات با رخداد</div>
-				<div className="card-body">
-					در هنگام ویرایش
-				</div>
+				<div className="card-body">در هنگام ویرایش</div>
 				<div className="node-icon">
 					<FontAwesomeIcon icon={faLandMineOn} />
 				</div>
@@ -71,7 +86,10 @@ const Diagram = () => {
 				style={{ top: "500px", right: "400px" }}
 			>
 				<div className="card-title">تصمیم گیری</div>
-				<div className="card-body"></div>
+				<div className="card-body">
+					<div className="card-body-separator">انتخاب چند مسیر</div>
+					<div>ارزیابی اتوماتیک بر اساس کیس ها</div>
+				</div>
 				<div className="node-icon">
 					<FontAwesomeIcon icon={faSignsPost} />
 				</div>
@@ -83,7 +101,6 @@ const Diagram = () => {
 				style={{ top: "500px", right: "700px" }}
 			>
 				<div className="card-title">عملیات موازی</div>
-				<div className="card-body"></div>
 				<div className="node-icon">
 					<FontAwesomeIcon icon={faCheckDouble} />
 				</div>

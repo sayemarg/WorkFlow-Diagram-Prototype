@@ -1,0 +1,42 @@
+.mb-1 {
+	margin-bottom: 1rem;
+}
+
+.property-form .node-title {
+	border-radius: 1rem;
+	border: none;
+	box-shadow: 0 0 1px black;
+	margin-bottom: 1rem;
+	padding: 0.5rem;
+	text-align: center;
+	width: 100%;
+}
+
+.property-form .input-group {
+	display: flex;
+	align-items: center;
+	column-gap: 0.5rem;
+}
+
+.property-form .input-group .label {
+	flex-shrink: 0;
+}
+
+.property-form .input-group select,
+.property-form .input-group input[type="text"] {
+	width: 100%;
+	padding: 0.5rem;
+	text-align: center;
+}
+
+.add-case-button {
+	background-color: green;
+	border-radius: 50%;
+	color: white;
+	cursor: pointer;
+	padding: 0.25rem;
+}
+
+.radio-button-group {
+	padding: 0.5rem;
+}

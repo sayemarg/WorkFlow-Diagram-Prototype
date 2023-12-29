@@ -6,7 +6,7 @@
 }
 
 ul {
-  list-style: none;
+	list-style: none;
 }
 
 .container {
@@ -16,13 +16,13 @@ ul {
 
 .toolbar,
 .properties {
-	background: #F7FBFF;
+	background: #f7fbff;
 	box-shadow: 0 0 1px rgb(0, 0, 0);
 	flex-basis: 20%;
 	flex-shrink: 0;
 	transition: flex-basis 0.5s ease, padding 0.5s ease;
-  overflow: auto;
-  padding: 1rem;
+	overflow: auto;
+	padding: 1rem;
 }
 
 .toolbar.is-collapsed,
@@ -34,16 +34,16 @@ ul {
 
 .card {
 	box-shadow: 0 0 1px black;
-  background-color: #eee;
-  border-radius: 1rem;
-  padding: 0.5rem;
+	background-color: #eee;
+	border-radius: 1rem;
+	padding: 0.5rem;
 }
 
 .card .card-title {
-  font-weight: bold;
-  text-align: center;
+	font-weight: bold;
+	text-align: center;
 }
 
 .card .card-body {
-  margin-top: 0.5rem;
+	margin-top: 0.5rem;
 }

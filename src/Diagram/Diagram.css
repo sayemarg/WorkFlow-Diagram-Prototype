@@ -4,56 +4,86 @@
 }
 
 .node {
+	cursor: pointer;
 	position: absolute;
+	user-select: none;
 	width: 250px;
-  cursor: pointer;
-  user-select: none;
+}
+
+.node::before,
+.node::after {
+	background-color: #eee;
+	border-radius: 50%;
+	border: 1px solid black;
+	content: "";
+	cursor: crosshair;
+	display: block;
+	height: 10px;
+	left: 50%;
+	position: absolute;
+	transform: translate3d(-50%, -50%, 0);
+	width: 10px;
+}
+
+.node::before {
+	top: 0;
+	transform: translate3d(-50%, -50%, 0);
+}
+
+.node::after {
+	bottom: 0;
+	transform: translate3d(-50%, 50%, 0);
 }
 
 .node .card-body {
-  background-color: white;
-  border-radius: 1rem;
-  text-align: center;
-  padding: 0.5rem;
+	background-color: white;
+	border-radius: 1rem;
+	padding: 0.5rem;
+	text-align: center;
+}
+
+.card-body-separator {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+	margin-bottom: 0.5rem;
+	padding-bottom: 0.5rem;
 }
 
 .node .node-icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: white;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: translate3d(40%, -40%, 0);
-  border: 1px solid black;
-  overflow: hidden;
-  pointer-events: none;
+	align-items: center;
+	background-color: white;
+	border-radius: 50%;
+	border: 1px solid black;
+	display: flex;
+	height: 20px;
+	justify-content: center;
+	overflow: hidden;
+	pointer-events: none;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	width: 20px;
 }
 
 .node.hand {
-	background-color: #E9B872;
+	background-color: #e9b872;
 }
 
 .node.auto-delete {
-	background-color: #90A959;
+	background-color: #90a959;
 }
 
 .node.auto-convert {
-	background-color: #D96C06;
+	background-color: #d96c06;
 }
 
 .node.event-base {
-	background-color: #8380B6;
+	background-color: #8380b6;
 }
 
 .node.choice {
-	background-color: #A63D40;
+	background-color: #a63d40;
 }
 
 .node.parallel {
-	background-color: #6494AA;
+	background-color: #6494aa;
 }
